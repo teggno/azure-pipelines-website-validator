@@ -10,8 +10,6 @@ This extension provides build and release tasks for validating websites. Tests w
 
 After installing the extension, you can add one (or more) of the tasks to a new or existing [build definition](https://docs.microsoft.com/en-us/azure/devops/pipelines/get-started-designer?view=vsts&tabs=new-nav) or [release definition](https://docs.microsoft.com/en-us/azure/devops/pipelines/release/define-multistage-release-process?view=vsts)
 
-![add-task](add-task.png)
-
 ## Get the source
 
 The [source](https://github.com/teggno/azure-pipelines-website-validator) for this extension is on GitHub. Take, fork, and extend.
