@@ -1,0 +1,63 @@
+{
+    "manifestVersion": 1,
+    "id": "website-validator",
+    "name": "Website Validation Tasks",
+    "version": "0.0.18",
+    "publisher": "teggno",
+    "public": false,
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "description": "Tasks for validating websites. Tests web pages for broken links and compliance.",
+    "icons": {
+        "default": "images/extension-icon.png"
+    },
+    "files": [
+        {
+            "path": "tasks/brokenLinkChecker"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "broken-link-checker",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "tasks/brokenLinkChecker"
+            }
+        }
+    ],
+    "categories": [
+        "Test",
+        "Build and release"
+    ],
+    "tags": [
+        "Continuous Integration",
+        "Continuous Delivery",
+        "Build",
+        "Release"
+    ],
+    "content": {
+        "details": {
+            "path": "overview.md"
+        },
+        "license": {
+            "path": "license.txt"
+        }
+    },
+    "links": {
+        "home": {
+            "uri": "https://www.adwise.ch"
+        },
+        "repository": {
+            "uri": "https://github.com/teggno/azure-pipelines-website-validator"
+        },
+        "issues": {
+            "uri": "https://github.com/teggno/azure-pipelines-website-validator/issues"
+        }
+    }
+}
