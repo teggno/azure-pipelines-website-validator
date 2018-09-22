@@ -15,7 +15,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node build/build.js"
+    "build": "tsc && node build/build.js",
+    "package": "npm run-script build && tfx extension create --root dist --output-path dist"
   },
   "keywords": [],
   "author": "Christian Bär",

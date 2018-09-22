@@ -9,16 +9,15 @@ console.log("Start build.js");
 var srcDir =  path.resolve(__dirname, "../src");
 var distDir = path.resolve(__dirname, "../dist");
 
-clean()
+cleanDist()
     .then(copySrc)
-    //.then(copyPackageJson)
     .then(npminstall)
     .then(logCompletion)
     .catch(function(err){
         console.error(err);
     });
 
-function clean(){
+function cleanDist(){
     return new Promise(function(resolve, reject){
         rimraf(distDir, function(err){
             if (err) {
@@ -45,22 +44,6 @@ function copySrc(){
             }
 
             console.log("Copied files from " + srcDir + " to " + distDir);
-            resolve();
-        });
-    });
-}
-
-function copyPackageJson(){
-    return new Promise(function(resolve, reject){
-        var packagePath = path.join(path.resolve(__dirname, ".."), "package.json");
-        var packageDistPath = path.join(distDir, "package.json");
-        ncp(packagePath, packageDistPath, function(err){
-            if (err) {
-                reject(err); 
-                return;
-            }
-
-            console.log("Copied " + packagePath + " to " + packageDistPath);
             resolve();
         });
     });

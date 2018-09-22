@@ -16,7 +16,7 @@ The [source](https://github.com/teggno/azure-pipelines-website-validator) for th
 
 If you have feedback or issues, please file an issue on [GitHub](https://github.com/teggno/azure-pipelines-website-validator/issues)
 
-## Using this extension as a template for your own
+## Using this extension as a template for your own extension
 Feel free to use the [source](https://github.com/teggno/azure-pipelines-website-validator) of this extension as a template for your own extension.
 To make it easier for you to decide if this extension suits your needs, here are its characteristics:
 * Implemented in TypeScript
