@@ -1,3 +1,5 @@
+[![Build status](https://dev.azure.com/teggno/azure-pipelines-website-validator/_apis/build/status/azure-pipelines-website-validator-CI)](https://dev.azure.com/teggno/azure-pipelines-website-validator/_build/latest?definitionId=12)
+
 ## Website validation tasks for Azure Pipelines
 
 This extension provides build and release tasks for validating websites. Tests web pages for broken links.
