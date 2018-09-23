@@ -1,19 +1,24 @@
 import * as tl from "vsts-task-lib";
 var blc = require("broken-link-checker");
+var Table = require('cli-table');
 
 check(parseInput())
-    .then(function(results){
-        if (results.length === 0) {
-            console.log("Didn't find any broken links.");
-        }
-        else {
-            tl.error(`Found ${ results.length } broken links`);
-            results.forEach(function(brokenLink){
-                console.log(`In page ${ brokenLink.containingPageUrl }, link ${ brokenLink.brokenLinkUrl}, reason ${ brokenLink.brokenReason }`);
-            });
-            process.exit(1);    
-        }
-    });
+    .then(printResults);
+
+function printResults(results: BrokenLink[]){
+    if (results.length === 0) {
+        console.log("Didn't find any broken links.");
+    }
+    else {
+        tl.error(`Found ${ results.length } broken link(s)`);
+        var table = new Table({
+            head: ['Containing page', 'Broken link', 'Reason']
+        });
+        results.forEach(r => table.push([r.containingPageUrl, r.brokenLinkUrl, r.brokenReason]));
+        console.log(table.toString());
+        process.exit(1);    
+    }
+}
 
 function parseInput() : Options {
     return { 
