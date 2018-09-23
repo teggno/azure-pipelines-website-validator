@@ -1,12 +1,26 @@
 This extension provides build and release tasks for validating websites. Tests web pages for broken links.
 
+## How to use
+
+After installing the extension, you can add one (or more) of the tasks to a new or existing [build definition](https://docs.microsoft.com/en-us/azure/devops/pipelines/get-started-designer?view=vsts&tabs=new-nav) or [release definition](https://docs.microsoft.com/en-us/azure/devops/pipelines/release/define-multistage-release-process?view=vsts)
+
 ## Tasks included
 
 * **Broken Link Checker**: Test a web site for broken links.
 
-## How to use
+The paragraphs below provide details about each task.
 
-After installing the extension, you can add one (or more) of the tasks to a new or existing [build definition](https://docs.microsoft.com/en-us/azure/devops/pipelines/get-started-designer?view=vsts&tabs=new-nav) or [release definition](https://docs.microsoft.com/en-us/azure/devops/pipelines/release/define-multistage-release-process?view=vsts)
+### Broken Link Checker
+Provide the base URL of a website to this task. When run, the task will visit the website and also recursively all linked pages with the same base URL and check them for broken links.
+
+#### Options
+* Base URL
+* List of URL's to ignore (won't be reported as broken links)
+* Check the link using HTTP HEAD or GET
+
+#### Check results
+* If at least one broken link is found, an error will be generated which, by default, will cause the build to break.
+* Outputs the broken links and their containing pages to the console. This can be viewed in the builds logs.
 
 ## Get the source
 
