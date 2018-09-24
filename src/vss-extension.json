@@ -2,9 +2,9 @@
     "manifestVersion": 1,
     "id": "website-validator",
     "name": "Website Validation Tasks",
-    "version": "0.0.18",
+    "version": "0.0.22",
     "publisher": "teggno",
-    "public": false,
+    "public": true,
     "targets": [
         {
             "id": "Microsoft.VisualStudio.Services"
