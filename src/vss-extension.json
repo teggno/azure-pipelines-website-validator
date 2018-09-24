@@ -4,7 +4,7 @@
     "name": "Website Validation Tasks",
     "version": "0.0.18",
     "publisher": "teggno",
-    "public": false,
+    "public": true,
     "targets": [
         {
             "id": "Microsoft.VisualStudio.Services"
