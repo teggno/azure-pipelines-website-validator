@@ -4,7 +4,7 @@
     "name": "Website Validation Tasks",
     "version": "0.0.18",
     "publisher": "teggno",
-    "public": true,
+    "public": false,
     "targets": [
         {
             "id": "Microsoft.VisualStudio.Services"
@@ -46,7 +46,7 @@
             "path": "overview.md"
         },
         "license": {
-            "path": "license.txt"
+            "path": "license.md"
         }
     },
     "links": {
