@@ -20,7 +20,7 @@ Provide the base URL of a website to this task. When run, the task will visit th
 
 #### Check results
 * If at least one broken link is found, an error will be generated which, by default, will cause the build to break.
-* Outputs the broken links and their containing pages to the console. This can be viewed in the builds logs.
+* The broken links and their containing pages are printed to the console and can be reviewed in the build's logs.
 
 ## Get the source
 
